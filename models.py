@@ -9,7 +9,6 @@ from django.db import models
 
 
 class ClientInfo(models.Model):
-
     client_id = models.AutoField(primary_key=True)
     first_name = models.TextField()
     last_name = models.TextField()
@@ -17,7 +16,5 @@ class ClientInfo(models.Model):
     problems = models.CharField(max_length=250)
 
     class Meta:
+        managed = False
         db_table = 'client_info'
-
-
-
